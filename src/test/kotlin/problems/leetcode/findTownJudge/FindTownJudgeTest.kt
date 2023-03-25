@@ -19,7 +19,7 @@ internal class FindTownJudgeTest {
     private val test: FindTownJudge = FindTownJudge()
 
     @Test
-    fun `test 1`() {
+    fun `test 3 person labelled and town judge exists`() {
         val trust = listOf(Pair(1, 3), Pair(2, 3))
         val numberOfPeople = 3
         val result = test.findTownJudge(numberOfPeople, trust)
@@ -27,7 +27,7 @@ internal class FindTownJudgeTest {
     }
 
     @Test
-    fun `test 2`() {
+    fun `test 4 person labelled and town judge exists`() {
         val trust = listOf(Pair(1, 3), Pair(1, 4), Pair(2, 3), Pair(2, 4), Pair(4, 3))
         val numberOfPeople = 4
         val result = test.findTownJudge(numberOfPeople, trust)
@@ -35,7 +35,7 @@ internal class FindTownJudgeTest {
     }
 
     @Test
-    fun `test 3`() {
+    fun `test 3 person labelled and town judge doesn't exists`() {
         val trust = listOf(Pair(1, 3), Pair(2, 3), Pair(3, 1))
         val numberOfPeople = 3
         val result = test.findTownJudge(numberOfPeople, trust)
@@ -43,7 +43,7 @@ internal class FindTownJudgeTest {
     }
 
     @Test
-    fun `test 4`() {
+    fun `given three person labelled, two pair of trust where town judge doesn't exists`() {
         val trust = listOf(Pair(1, 2), Pair(2, 3))
         val numberOfPeople = 3
         val result = test.findTownJudge(numberOfPeople, trust)
